@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AutoRiaWebScraper {
+public class DataScraper {
     private final static int MAX_BRANDS = 5;
     private final static int MAX_PAGES_OF_BRAND = 10;
 

@@ -11,8 +11,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AutoRiaWebScraperTest {
-    private final AutoRiaWebScraper scraper = new AutoRiaWebScraper();
+class DataScraperTest {
+    private final DataScraper scraper = new DataScraper();
 
     @Test
     void scrapCarAdvertisement() {
