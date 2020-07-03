@@ -12,9 +12,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class TableCreator {
-    public void createTable(List<CarAdvertisement> advertisements, String fileName) {
-        Workbook wb = new HSSFWorkbook();
-        Sheet sheet = wb.createSheet("auto");
+    private static final String FILE_NAME = "auto.xls";
+    private static final String SHEET_NAME = "auto";
+
+    public void createTable(List<CarAdvertisement> advertisements) {
+        Workbook workbook = new HSSFWorkbook();
+        Sheet sheet = workbook.createSheet(SHEET_NAME);
         sheet.setDefaultColumnWidth(10000);
 
         for (int count = 0; count < advertisements.size(); count++) {
@@ -49,12 +52,12 @@ public class TableCreator {
             cellId.setCellValue(advertisement.getId());
         }
 
-        createFile(wb, fileName);
+        createFile(workbook);
     }
 
-    private void createFile(Workbook wb, String fileName) {
-        try (FileOutputStream fos = new FileOutputStream(fileName)) {
-            wb.write(fos);
+    private void createFile(Workbook workbook) {
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME)) {
+            workbook.write(fos);
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
