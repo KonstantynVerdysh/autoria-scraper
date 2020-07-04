@@ -11,4 +11,5 @@ public interface Parser {
     String parseSeller();
     List<String> parsePhoto();
     String parseDescription();
+    String parseId();
 }

@@ -23,6 +23,7 @@ class AdvertisementGenerator {
         advertisement.setSeller(parser.parseSeller());
         advertisement.setPhoto(parser.parsePhoto());
         advertisement.setDescription(parser.parseDescription());
+        advertisement.setId(parser.parseId());
         return advertisement;
     }
 }

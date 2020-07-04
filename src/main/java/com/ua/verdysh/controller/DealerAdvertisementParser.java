@@ -45,4 +45,8 @@ class DealerAdvertisementParser implements Parser {
     public String parseDescription() {
         return "";
     }
+    @Override
+    public String parseId() {
+        return "";
+    }
 }

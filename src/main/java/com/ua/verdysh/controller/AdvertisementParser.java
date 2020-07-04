@@ -45,4 +45,8 @@ class AdvertisementParser implements Parser {
     public String parseDescription() {
         return ParserHelper.getElementText(document, "dd[class='additional-data show-line'] div#full-description");
     }
+    @Override
+    public String parseId() {
+        return ParserHelper.getElementText(document,"section.m-padding.mb-20 ul.mb-10-list.unstyle.size13.mb-15 li:nth-child(2) span");
+    }
 }

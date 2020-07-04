@@ -35,7 +35,8 @@ public class TableCreator {
 
             List<String> advertisementFields = new ArrayList<>(Arrays.asList(advertisement.getUrl(), advertisement.getPriceUsd(),
                     advertisement.getPriceUah(), advertisement.getHeading(), advertisement.getCity(),
-                    advertisement.getSeller(), advertisement.getPhoto().toString(), advertisement.getDescription()));
+                    advertisement.getSeller(), advertisement.getPhoto().toString(), advertisement.getDescription(),
+                    advertisement.getId()));
 
             advertisementFields.forEach(v -> createCell(row, advertisementFields.indexOf(v), v));
         }
