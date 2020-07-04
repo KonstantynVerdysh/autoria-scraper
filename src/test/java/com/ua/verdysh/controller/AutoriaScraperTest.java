@@ -10,14 +10,14 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AutoriaParserTest {
+class AutoriaScraperTest {
     private final AutoriaScraper scraper = new AutoriaScraper();
 
     @Test
-    void scrapCarAdvertisement() {
+    void generateAdvertisement_returnAutoriaAdvertisementWhenDocumentIsAutoriaCarPage() {
         Document document = ScraperHelper.getDocument("https://auto.ria.com/auto_vaz_21099_25736371.html");
 
-        Advertisement advertisement = scraper.generateAdvertisement(document);
+        Advertisement advertisement = scraper.getAdvertisement(document);
 
         String expectedCity = "Ровно";
         String actualCity = advertisement.getCity();

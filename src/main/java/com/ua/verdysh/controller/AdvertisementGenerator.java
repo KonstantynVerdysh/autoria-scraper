@@ -5,7 +5,7 @@ import com.ua.verdysh.model.Advertisement;
 import org.jsoup.nodes.Document;
 
 class AdvertisementGenerator {
-    Advertisement generateCarAdvertisement(Document document) {
+    Advertisement generateAdvertisement(Document document) {
         Advertisement advertisement = new Advertisement();
         Parser parser;
 

@@ -23,14 +23,14 @@ public class AutoriaScraper {
         List<String> cars = getCarsUrl();
         for (String carUrl : cars) {
             Document doc = ScraperHelper.getDocument(carUrl);
-            result.add(generateAdvertisement(doc));
+            result.add(getAdvertisement(doc));
         }
         return result;
     }
 
-    Advertisement generateAdvertisement(Document document) {
+    Advertisement getAdvertisement(Document document) {
         AdvertisementGenerator generator = new AdvertisementGenerator();
-        return generator.generateCarAdvertisement(document);
+        return generator.generateAdvertisement(document);
     }
 
     private List<String> getCarsUrl() {
