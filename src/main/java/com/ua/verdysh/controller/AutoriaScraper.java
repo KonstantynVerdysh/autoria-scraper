@@ -58,7 +58,7 @@ public class AutoriaScraper {
         for (int count = FIRST_PAGE_OF_BRAND; count <= MAX_PAGE_OF_BRAND; count++) {
             Document document = ScraperHelper.getDocument(brandUrl + String.format("?page=%d", count));
             if (document != null) {
-                for (Element element : document.select(".m-link-ticket")) {
+                for (Element element : document.select("a.m-link-ticket")) {
                     result.add(element.attr("href"));
                 }
             }

@@ -1,12 +1,12 @@
 package com.ua.verdysh.controller;
 
 import com.ua.verdysh.controller.helpers.ParserHelper;
-import com.ua.verdysh.controller.interfaces.Parser;
+import com.ua.verdysh.controller.interfaces.Parsable;
 import org.jsoup.nodes.Document;
 
 import java.util.List;
 
-class AdvertisementParser implements Parser {
+class AdvertisementParser implements Parsable {
     private Document document;
 
     AdvertisementParser(Document document) {

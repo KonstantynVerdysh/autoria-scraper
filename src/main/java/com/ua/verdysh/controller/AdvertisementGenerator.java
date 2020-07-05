@@ -1,13 +1,13 @@
 package com.ua.verdysh.controller;
 
-import com.ua.verdysh.controller.interfaces.Parser;
+import com.ua.verdysh.controller.interfaces.Parsable;
 import com.ua.verdysh.model.Advertisement;
 import org.jsoup.nodes.Document;
 
 class AdvertisementGenerator {
     Advertisement generateAdvertisement(Document document) {
         Advertisement advertisement = new Advertisement();
-        Parser parser;
+        Parsable parser;
 
         if (document.location().contains("newauto")) {
             parser = new DealerAdvertisementParser(document);

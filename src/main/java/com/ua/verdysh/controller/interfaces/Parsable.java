@@ -2,7 +2,7 @@ package com.ua.verdysh.controller.interfaces;
 
 import java.util.List;
 
-public interface Parser {
+public interface Parsable {
     String parseUrl();
     String parsePriceUsd();
     String parsePriceUah();
